@@ -11,7 +11,6 @@ else
 {
     int finish = ThirdDigit(number);
     Console.WriteLine($"Третья цифра числа {number} -> {finish}");
-
 }
 
 int ThirdDigit(int dg)
