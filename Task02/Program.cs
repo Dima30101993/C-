@@ -1,2 +1,65 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// // 17. Напишите программу, которая принимает на вход координаты 
+// // точки (X и Y), причем X != 0 Y != 0
+// // выдает номер четверти плоскости
+
+// Console.WriteLine("Введите координаты точки:");
+// Console.Write("X: ");
+// int xCoordinate = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Y: ");
+// int yCoordinate = Convert.ToInt32(Console.ReadLine());
+
+// int quarter = Quarter(xCoordinate, yCoordinate);
+// string result = quarter > 0 
+//                 ? $"Указаные координаты соответствуют четверти: {quarter}" 
+//                 : "Введены некоректные координаты";
+// Console.WriteLine(result);
+
+// int Quarter(int x, int y)
+// {
+//     if (x > 0 && y > 0) return 1;
+//     if (x < 0 && y > 0) return 2;
+//     if (x < 0 && y < 0) return 3;
+//     if (x > 0 && y < 0) return 4;
+//     return 0;
+// }
+
+// Console.WriteLine("Введите номер четверти:");
+// Console.Write("Четверть: ");
+// int Quarter = Convert.ToInt32(Console.ReadLine());
+
+// string finish = Coordinates(Quarter);
+// Console.WriteLine(finish);
+
+// string Coordinates(int quarter)
+// {
+//     if (quarter == 1) return "x > 0, y > 0";
+//     if (quarter == 2) return "x < 0, y > 0";
+//     if (quarter == 3) return "x < 0, y < 0";
+//     if (quarter == 4) return "x > 0, y < 0";
+//     return "Такой четверти не существует";
+// }
+
+// Напишите программу, которая принимает на вход
+// координаты двух точек и находит расстояние между ними
+// в 2D пространстве.
+
+// 
+
+Console.WriteLine("Введите число N: ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+if(N < 1)
+{
+    Console.WriteLine("Некоректные данные");
+    return;
+}
+CubeTable(N);
+
+void CubeTable(int num)
+{
+    for(int i = 1; i <= num; i++)
+    {
+        int cube = i * i * i;
+        Console.WriteLine($"{i}    {cube}");
+    }
+}
